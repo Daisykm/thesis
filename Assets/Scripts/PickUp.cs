@@ -7,8 +7,7 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private int count;
-    
-  
+    public GameObject winTextObject;
     public TextMeshProUGUI countText;
     
 
@@ -16,13 +15,13 @@ public class PickUp : MonoBehaviour
     {
         count = 0;
         
-        SetCountText();
+        SetCountText ();
+        
+        // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
+        winTextObject.SetActive(false);
     }
 
-    void SetCountText()
-    {
-        countText.text = "Tsukumogami:" + count.ToString();
-    }
+   
   
 
     private void OnTriggerEnter(Collider other)
@@ -35,16 +34,17 @@ public class PickUp : MonoBehaviour
             
             SetCountText();
         }
-        
-        if (other.gameObject.CompareTag("brick"))
-        {
-            other.gameObject.SetActive(false);
-        }
-     
-        
     }
-    
-    
+
+    void SetCountText()
+    {
+        countText.text = "Tsukumogami:" + count.ToString();
+        if (count >=8) 
+        {
+            // Set the text value of your 'winText'
+            winTextObject.SetActive(true);
+        }
+    }
   
 
    
