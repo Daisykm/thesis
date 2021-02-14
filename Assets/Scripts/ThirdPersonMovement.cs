@@ -7,12 +7,19 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public CharacterController controller;
 
+    Animator anim;
+
     public Transform cam;
 
     public float walkSpeed = 6f;
 
     float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
+
+    private void Start()
+    {
+        anim = GetComponentInChildren<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -33,6 +40,12 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
             controller.Move(moveDir.normalized * walkSpeed * Time.deltaTime);
+
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
         }
 
     }
