@@ -10,14 +10,22 @@ public class ThirdPersonMovement : MonoBehaviour
     Animator anim;
 
     public Transform cam;
+    public Transform groundCheck;
 
     float playerSpeed;
+    float gravity = -19.6f;
+    float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
 
     public float walkSpeed = 6f;
     public float runSpeed = 10f;
+    public float groundDistance = 0.4f;
+    public float jumpHeight = 3f;
 
-    float turnSmoothTime = 0.1f;
-    float turnSmoothVelocity;
+    public LayerMask groundMask;
+
+    Vector3 velocity;
+    bool isGrounded;
 
     private void Start()
     {
@@ -31,11 +39,29 @@ public class ThirdPersonMovement : MonoBehaviour
     void Update()
     {
 
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+        if(isGrounded && velocity.y < 0f)
+        {
+            velocity.y = -2f;
+            anim.SetBool("isJumping", false);
+        }
+
         float horizontal = Input.GetAxisRaw("Horizontal");
 
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
+
+        if(Input.GetKey(KeyCode.Space) && isGrounded)
+        {
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            anim.SetBool("isJumping", true);
+        }
+
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
 
         if (direction.magnitude >= 0.1f)
         {
