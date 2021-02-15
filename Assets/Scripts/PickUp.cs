@@ -8,17 +8,21 @@ public class PickUp : MonoBehaviour
 {
     private int count;
     public GameObject winTextObject;
+    public GameObject brickwinTextObject;
     public TextMeshProUGUI countText;
-    
+    public TextMeshProUGUI brickCountText;
+    private int brickCount;
 
     private void Start()
     {
         count = 0;
-        
+        brickCount = 0;
         SetCountText ();
+        SetBrickCountText();
         
         // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
         winTextObject.SetActive(false);
+        brickwinTextObject.SetActive(false);
     }
 
    
@@ -34,6 +38,14 @@ public class PickUp : MonoBehaviour
             
             SetCountText();
         }
+        if (other.gameObject.CompareTag("brick"))
+        {
+            other.gameObject.SetActive(false);
+
+            brickCount = brickCount + 1;
+            
+            SetBrickCountText();
+        }
     }
 
     void SetCountText()
@@ -43,6 +55,15 @@ public class PickUp : MonoBehaviour
         {
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
+        }
+    }
+    void SetBrickCountText()
+    {
+        brickCountText.text = "brick:" + brickCount.ToString();
+        if (brickCount >=2) 
+        {
+            // Set the text value of your 'winText'
+            brickwinTextObject.SetActive(true);
         }
     }
   
