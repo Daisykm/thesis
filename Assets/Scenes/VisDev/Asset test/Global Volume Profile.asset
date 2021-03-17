@@ -82,19 +82,19 @@ MonoBehaviour:
   m_AdvancedMode: 0
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 0.32999998, y: 0.8995001, z: 1, w: 0.16632017}
+    m_Value: {x: 0.26999998, y: 0.6593333, z: 1, w: 0.16632016}
   midtones:
     m_OverrideState: 0
-    m_Value: {x: 0.82, y: 0.991, z: 1, w: 0.08316007}
+    m_Value: {x: 0.95, y: 0.9816667, z: 1, w: -0.22933991}
   highlights:
     m_OverrideState: 0
     m_Value: {x: 1, y: 0.39650002, z: 0.29000002, w: 0.4594595}
   shadowsStart:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0
     min: 0
   shadowsEnd:
-    m_OverrideState: 1
+    m_OverrideState: 0
     m_Value: 0.3
     min: 0
   highlightsStart:
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddcec8a8eb2d684d833ac8f5d26aebd, type: 3}
   m_Name: HDShadowSettings
   m_EditorClassIdentifier: 
-  active: 0
+  active: 1
   m_AdvancedMode: 0
   maxShadowDistance:
     m_OverrideState: 1
