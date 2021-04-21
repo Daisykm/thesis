@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2598226446208863981}
   - component: {fileID: 2598226446208863982}
   - component: {fileID: 2598226446208863983}
+  - component: {fileID: 835837194754335758}
   m_Layer: 0
   m_Name: Tsukumogami
   m_TagString: pickup
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e5d6bd72b26d5484f9c97cb1b8f59699, type: 2}
+  - {fileID: 2100000, guid: 98490d5c0d4c7d549b843dfec489c6c6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -95,3 +96,18 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5493758
   m_Center: {x: 0.0044237375, y: -0.0123977065, z: -0.009374142}
+--- !u!114 &835837194754335758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2598226446208863968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d295807d799a1b49afbc63d6570336a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 0}
+  _material1: {fileID: 2100000, guid: 98490d5c0d4c7d549b843dfec489c6c6, type: 2}
+  _material2: {fileID: 2100000, guid: 8e866ccd11838f3468caedef77c151f0, type: 2}
