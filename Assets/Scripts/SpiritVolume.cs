@@ -25,16 +25,16 @@ public class SpiritVolume : MonoBehaviour
         {
             SpirtVolume.SetActive(true);
             spiritVolumeActive = true;
-            thirdPersonCamera.SetActive(false);
-            spiritVisionCamera.SetActive(true);
+          //  thirdPersonCamera.SetActive(false);
+           // spiritVisionCamera.SetActive(true);
           //  playerMesh.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.E) && spiritVolumeActive == true)
         {
             SpirtVolume.SetActive(false);
             spiritVolumeActive = false;
-            thirdPersonCamera.SetActive(true);
-            spiritVisionCamera.SetActive(false);
+          //  thirdPersonCamera.SetActive(true);
+         //   spiritVisionCamera.SetActive(false);
            // playerMesh.SetActive(true);
         }
     }

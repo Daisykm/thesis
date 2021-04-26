@@ -10,6 +10,8 @@ public class SpiritVision : MonoBehaviour
     public Material _material;
     private static int Opacity = Shader.PropertyToID("_opacity");
     private bool isSpiritVisionOn;
+    private bool beaconActive;
+ 
   
  
     void Start()
@@ -27,7 +29,7 @@ public class SpiritVision : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && isSpiritVisionOn == false)
         { 
-            _material.SetFloat(Opacity,1);
+            _material.SetFloat(Opacity,0.5f);
         
             isSpiritVisionOn = true;
        

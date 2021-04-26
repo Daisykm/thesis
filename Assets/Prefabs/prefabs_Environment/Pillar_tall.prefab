@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5910927547163329382}
   - component: {fileID: 5910927547163329381}
   - component: {fileID: 5167232707518164514}
+  - component: {fileID: 2673893928098494129}
   m_Layer: 6
   m_Name: Pillar_tall
   m_TagString: Untagged
@@ -390,7 +391,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad8ca698a0b27894b98c7135081ba4bc, type: 2}
+  - {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -447,3 +448,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2, y: 9.9169035, z: 0.49513495}
   m_Center: {x: 1, y: 3.9561803, z: -0.24756739}
+--- !u!114 &2673893928098494129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5910927547163329379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d295807d799a1b49afbc63d6570336a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
