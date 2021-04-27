@@ -13,8 +13,13 @@ public class PickUp : MonoBehaviour
     public TextMeshProUGUI brickCountText;
     private int brickCount;
 
+    public Wayfind2 wayfind;
+
     private void Start()
     {
+
+        wayfind = GetComponent<Wayfind2>();
+        
         count = 0;
         brickCount = 0;
         SetCountText ();
@@ -32,7 +37,11 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("pickup"))
         {
-            other.gameObject.SetActive(false);
+            
+            wayfind.Collectable.Remove(other.gameObject);
+            
+           Destroy(other.gameObject);
+           //other.gameObject.SetActive(false);
 
             count = count + 1;
             
