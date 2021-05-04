@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 628527180568414596}
   m_Layer: 0
   m_Name: Cube (847)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -448,7 +448,7 @@ GameObject:
   - component: {fileID: 628527180635023392}
   m_Layer: 0
   m_Name: Cube (843)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -881,7 +881,7 @@ GameObject:
   - component: {fileID: 628527181562478619}
   m_Layer: 0
   m_Name: Cube (827)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1314,7 +1314,7 @@ GameObject:
   - component: {fileID: 628527181624335883}
   m_Layer: 0
   m_Name: Cube (841)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1747,7 +1747,7 @@ GameObject:
   - component: {fileID: 628527181748361181}
   m_Layer: 0
   m_Name: Cube (849)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2180,7 +2180,7 @@ GameObject:
   - component: {fileID: 628527181961851293}
   m_Layer: 0
   m_Name: Cube (848)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -2613,7 +2613,7 @@ GameObject:
   - component: {fileID: 628527182034630465}
   m_Layer: 0
   m_Name: Cube (828)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3046,7 +3046,7 @@ GameObject:
   - component: {fileID: 628527182064166665}
   m_Layer: 0
   m_Name: Cube (846)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3479,7 +3479,7 @@ GameObject:
   - component: {fileID: 628527182089135542}
   m_Layer: 0
   m_Name: Cube (863)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3912,7 +3912,7 @@ GameObject:
   - component: {fileID: 628527182680807572}
   m_Layer: 0
   m_Name: Cube (844)
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

@@ -21,13 +21,17 @@ public class ThirdPersonMovement : MonoBehaviour
     public float runSpeed = 10f;
     public float groundDistance = 0.4f;
     public float jumpHeight = 3f;
+    public float swimSpeed = 3f;
 
+    
     public LayerMask groundMask;
+    public LayerMask waterMask;
 
     ClimbController climb;
 
     Vector3 velocity;
     bool isGrounded;
+    bool isWater;
 
     private void Start()
     {
@@ -53,6 +57,20 @@ public class ThirdPersonMovement : MonoBehaviour
                 velocity.y = -2f;
                 anim.SetBool("isJumping", false);
             }
+            
+            isWater = Physics.CheckSphere(groundCheck.position, groundDistance, waterMask);
+            
+            if (isWater && velocity.y < 0f)
+            {
+                velocity.y = -2f;
+                anim.SetBool("isSwimming", true);
+               // playerSpeed = swimSpeed;
+            }
+            else
+            {
+                anim.SetBool("isSwimming", false);
+                //playerSpeed = walkSpeed;
+            }
 
             float horizontal = Input.GetAxisRaw("Horizontal");
 
@@ -73,13 +91,18 @@ public class ThirdPersonMovement : MonoBehaviour
             if (direction.magnitude >= 0.1f)
             {
 
-                if (Input.GetKey(KeyCode.LeftShift))
+                if (Input.GetKey(KeyCode.LeftShift) && isGrounded)
                 {
                     playerSpeed = runSpeed;
                 }
                 else
                 {
                     playerSpeed = walkSpeed;
+                }
+
+                if (isWater == true)
+                {
+                    playerSpeed = swimSpeed;
                 }
 
                 float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;

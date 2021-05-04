@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2598226446208863981}
   - component: {fileID: 2598226446208863982}
   - component: {fileID: 2598226446208863983}
-  - component: {fileID: 2487461393917702855}
   m_Layer: 0
   m_Name: Tsukumogami
   m_TagString: pickup
@@ -99,21 +98,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5493758
   m_Center: {x: 0.0044237375, y: -0.0123977065, z: -0.009374142}
---- !u!114 &2487461393917702855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2598226446208863968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6a3b53c4d4470c44bdb5d7238fd17b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Beacon: {fileID: 8208305618359420048}
-  GlowOff: {fileID: 3808655752489297063}
-  GlowOn: {fileID: 4808922701392488267}
 --- !u!1 &3481900161571622209
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +208,7 @@ GameObject:
   - component: {fileID: 5285639756202589255}
   m_Layer: 0
   m_Name: GlowOff
-  m_TagString: pickup
+  m_TagString: glowOff
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -319,11 +303,11 @@ GameObject:
   - component: {fileID: 487357170991236098}
   m_Layer: 0
   m_Name: GlowOn
-  m_TagString: pickup
+  m_TagString: glowOn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &895778513782764707
 Transform:
   m_ObjectHideFlags: 0
@@ -411,11 +395,11 @@ GameObject:
   - component: {fileID: 479916983511127736}
   m_Layer: 0
   m_Name: Wayfinding 3
-  m_TagString: Untagged
+  m_TagString: beacon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &479916983511127736
 Transform:
   m_ObjectHideFlags: 0
