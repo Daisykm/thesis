@@ -18,6 +18,9 @@ public class Wayfind3 : MonoBehaviour
     //private GameObject player;
     
     private WayfindController _wayfindController;
+
+    public GameObject BeaconONText;
+    public GameObject BeaconOFFText;
     
     void Start()
     {
@@ -38,6 +41,9 @@ public class Wayfind3 : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
         
         _wayfindController = this.GetComponent<WayfindController>();
+        
+        BeaconONText.SetActive(false);
+        BeaconOFFText.SetActive(true);
     }
 
    
@@ -48,15 +54,21 @@ public class Wayfind3 : MonoBehaviour
 
             foreach (GameObject beacon in Beacon)
             {
-                
-                beacon.SetActive(true);
+                if (beacon != null)
+                {
+                    beacon.SetActive(true);
+                }
+              
                 
             }
             
             foreach (GameObject glowOff in GlowOff)
             {
-
-                glowOff.SetActive(false);
+                if (glowOff != null)
+                {
+                    glowOff.SetActive(false);
+                }
+                
 
             }
             
@@ -69,21 +81,31 @@ public class Wayfind3 : MonoBehaviour
             
             _wayfindController.isWayfindingOn = true;
             //isSpiritVisionOn = false;
+            
+            BeaconONText.SetActive(true);
+            BeaconOFFText.SetActive(false);
         }
         else if (Input.GetKeyDown(KeyCode.T) && beaconActive == true && _wayfindController.isWayfindingOn == true)
         { 
             
             foreach (GameObject beacon in Beacon)
             {
+                if (beacon != null)
+                {
+                    beacon.SetActive(false);
+                }
                 
-                beacon.SetActive(false);
                 
             }
             
             foreach (GameObject glowOff in GlowOff)
             {
+                if (glowOff != null)
+                {
+                    glowOff.SetActive(true);
+                }
 
-                glowOff.SetActive(true);
+                
 
             }
             
@@ -96,30 +118,12 @@ public class Wayfind3 : MonoBehaviour
             
             _wayfindController.isWayfindingOn = false;
             //isSpiritVisionOn = false;
+            BeaconONText.SetActive(false);
+            BeaconOFFText.SetActive(true);
         }
         
         
-        /*if (Input.GetKeyDown(KeyCode.E) && beaconActive == false )
-        { 
-           
-        
-            //isSpiritVisionOn = true;
-            Beacon.SetActive(false);
-            GlowOff.SetActive(false);
-            GlowOn.SetActive(true);
-
-        }
-
-        else if  (Input.GetKeyDown(KeyCode.E)  && beaconActive == false )
-        {
-         
-            //isSpiritVisionOn = false;
-            Beacon.SetActive(false);
-            GlowOff.SetActive(true);
-            GlowOn.SetActive(false);
-
-
-        }*/
+    
 
     }
 }

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEditor;
+using TMPro;
 
 
 public class SpiritVision : MonoBehaviour
@@ -27,6 +28,12 @@ public class SpiritVision : MonoBehaviour
     public List<GameObject> GlowOff = new List<GameObject>();
 
     private WayfindController _wayfindController;
+
+    //UI
+    public GameObject VisionONText;
+    
+    public GameObject VisionOFFText;
+    
     
     
  
@@ -62,6 +69,9 @@ public class SpiritVision : MonoBehaviour
         //player = GameObject.FindGameObjectWithTag("Player");
  
         _wayfindController = this.GetComponent<WayfindController>();
+        
+        VisionONText.SetActive(false);
+        VisionOFFText.SetActive(true);
 
     }
     
@@ -84,14 +94,20 @@ public class SpiritVision : MonoBehaviour
             foreach (GameObject glowOn in GlowOn)
             {
 
-                glowOn.SetActive(true);
+                if (glowOn != null)
+                {
+                    glowOn.SetActive(true);
+                }
 
             }
             
             foreach (GameObject glowOff in GlowOff)
             {
 
-                glowOff.SetActive(false);
+                if (glowOff != null)
+                {
+                    glowOff.SetActive(false);
+                }
 
             }
             
@@ -102,6 +118,10 @@ public class SpiritVision : MonoBehaviour
             _wayfindController.isWayfindingOn = true;
 
             isSpiritVisionOn = true;
+            
+            VisionONText.SetActive(true);
+            VisionOFFText.SetActive(false);
+            
 
         }
         else if  (Input.GetKeyDown(KeyCode.E) && isSpiritVisionOn == true && _wayfindController.isWayfindingOn == true)
@@ -110,22 +130,26 @@ public class SpiritVision : MonoBehaviour
             {
 
                 //Material _material = seeThrough.GetComponent<Renderer>().material;
-                
                 matt.SetFloat(Opacity,0f);
+                
 
             }
             
             foreach (GameObject glowOn in GlowOn)
             {
-
-                glowOn.SetActive(false);
+                if (glowOn != null)
+                {
+                    glowOn.SetActive(false);
+                }
 
             }
             
             foreach (GameObject glowOff in GlowOff)
             {
-
-                glowOff.SetActive(true);
+                if (glowOff != null)
+                {
+                    glowOff.SetActive(true);
+                }
 
             }
             
@@ -134,6 +158,9 @@ public class SpiritVision : MonoBehaviour
             isSpiritVisionOn = false;
             
             _wayfindController.isWayfindingOn = false;
+            
+            VisionONText.SetActive(false);
+            VisionOFFText.SetActive(true);
             
         }
        

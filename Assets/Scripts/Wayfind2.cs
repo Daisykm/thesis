@@ -9,6 +9,8 @@ public class Wayfind2 : MonoBehaviour
 {
 
     public List<GameObject> Collectable = new List<GameObject>();
+    
+    //public List<GameObject> Doorway = new List<GameObject>();
 
     private GameObject player;
 
@@ -22,9 +24,10 @@ public class Wayfind2 : MonoBehaviour
 
     private bool isWindActive;
 
-    //private bool isSpiritVisionOn;
+    public GameObject WindONText;
+    public GameObject WindOffText;
 
-    //private bool isBeaconActive;
+
     
     private WayfindController _wayfindController;
 
@@ -34,15 +37,18 @@ public class Wayfind2 : MonoBehaviour
         
         Collectable.AddRange(GameObject.FindGameObjectsWithTag("pickup"));
         
+        Collectable.AddRange(GameObject.FindGameObjectsWithTag("Door"));
+        
         _wayfindController = this.GetComponent<WayfindController>();
 
         player = this.gameObject;
 
         isWindActive = false;
         wind.Stop();
-        //isSpiritVisionOn = false;
-        //isBeaconActive = false;
-
+        
+        WindONText.SetActive(false);
+        WindOffText.SetActive(true);
+    
 
     }
 
@@ -58,19 +64,20 @@ public class Wayfind2 : MonoBehaviour
             foreach (GameObject collectable in Collectable)
             {
 
-                    
-
-                float distance = Vector3.Distance(player.transform.position, collectable.transform.position);
-
-                if (distance < nearestDistance)
+                if (collectable != null)
                 {
-                    nearestDistance = Vector3.Distance(player.transform.position, collectable.transform.position);
-                    nearestCollectable = collectable;
+                    float distance = Vector3.Distance(player.transform.position, collectable.transform.position);
+
+                    if (distance < nearestDistance)
+                    {
+                        nearestDistance = Vector3.Distance(player.transform.position, collectable.transform.position);
+                        nearestCollectable = collectable;
+                    }
                 }
 
             }
 
-            Debug.DrawLine(player.transform.position, nearestCollectable.transform.position, new Color(1f, 0f, 0.87f));
+         //   Debug.DrawLine(player.transform.position, nearestCollectable.transform.position, new Color(1f, 0f, 0.87f));
 
             Vector3 rotateDirection = nearestCollectable.transform.position - wind.transform.position;
 
@@ -79,6 +86,8 @@ public class Wayfind2 : MonoBehaviour
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, rotateDirection, singleStep, 0f);
 
             wind.transform.rotation = Quaternion.LookRotation(newDirection);
+            
+            
                 
         }
         else if (Collectable.Count < 1)
@@ -94,6 +103,9 @@ public class Wayfind2 : MonoBehaviour
            isWindActive = true;
            //isBeaconActive = false;
            //isSpiritVisionOn = false;
+           
+           WindONText.SetActive(true);
+           WindOffText.SetActive(false);
 
         }
         else if (Input.GetKeyDown(KeyCode.R) && isWindActive && _wayfindController.isWayfindingOn == true)
@@ -107,42 +119,13 @@ public class Wayfind2 : MonoBehaviour
             //isBeaconActive = false;
             //isSpiritVisionOn = false;
             
+            WindONText.SetActive(false);
+            WindOffText.SetActive(true);
+            
         }
-        
-       /* if (Input.GetKeyDown(KeyCode.E) && isSpiritVisionOn == false && isBeaconActive == false && isWindActive == false)
-        { 
-           
-        
-            isSpiritVisionOn = true;
-            isBeaconActive = false;
-            isWindActive = false;
 
-        }
-        
-        else if (Input.GetKeyDown(KeyCode.E) && isSpiritVisionOn == true && isBeaconActive == false && isWindActive == false)
-        { 
-           
-        
-            isSpiritVisionOn = false;
-            isBeaconActive = false;
-            isWindActive = false;
 
-        }
-        if (Input.GetKeyDown(KeyCode.T) && isBeaconActive == false && isSpiritVisionOn == false && isWindActive == false)
-        {
-            isBeaconActive = true;
-            isSpiritVisionOn = false;
-            isWindActive = false;
 
-        }
-        else if (Input.GetKeyDown(KeyCode.T) && isBeaconActive == true && isSpiritVisionOn == false && isWindActive ==false)
-        {
-            isBeaconActive = false;
-            isSpiritVisionOn = false;
-            isWindActive = false;
-           
-        }*/
-        
     }
     
 }

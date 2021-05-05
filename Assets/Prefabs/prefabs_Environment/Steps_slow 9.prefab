@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 589086269965970061}
   - component: {fileID: 589086269965970060}
   - component: {fileID: 589086269965970063}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Steps_slow 9
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1632,7 +1632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad8ca698a0b27894b98c7135081ba4bc, type: 2}
+  - {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1673,6 +1673,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}

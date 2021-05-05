@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 8572518693572859345}
   - component: {fileID: 6146957375975464531}
   - component: {fileID: 1685011006907540341}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Lumpy floor
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -576,7 +576,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad8ca698a0b27894b98c7135081ba4bc, type: 2}
+  - {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -13,17 +13,21 @@ public class PickUp : MonoBehaviour
     public TextMeshProUGUI brickCountText;
     private int brickCount;
 
-    public Wayfind2 wayfind;
+    private SpiritVision wayfind1;
+    private Wayfind2 wayfind2;
+    private Wayfind3 wayfind3;
 
     private void Start()
     {
 
-        wayfind = GetComponent<Wayfind2>();
+        wayfind1 = this.GetComponent<SpiritVision>();
+        wayfind2 = this.GetComponent<Wayfind2>();
+        wayfind3 = this.GetComponent<Wayfind3>();
         
         count = 0;
         brickCount = 0;
         SetCountText ();
-        SetBrickCountText();
+        //SetBrickCountText();
         
         // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
         winTextObject.SetActive(false);
@@ -38,9 +42,12 @@ public class PickUp : MonoBehaviour
         if (other.gameObject.CompareTag("pickup"))
         {
             
-            wayfind.Collectable.Remove(other.gameObject);
-            
-           Destroy(other.gameObject);
+            wayfind1.GlowOn.Remove(other.gameObject);
+            wayfind2.Collectable.Remove(other.gameObject);
+            wayfind3.Beacon.Remove(other.gameObject);
+            wayfind3.GlowOff.Remove(other.gameObject);
+
+            Destroy(other.gameObject);
            //other.gameObject.SetActive(false);
 
             count = count + 1;
@@ -59,7 +66,7 @@ public class PickUp : MonoBehaviour
 
     void SetCountText()
     {
-        countText.text = "Tsukumogami:" + count.ToString();
+        countText.text = "COLLECTABLES:" + count.ToString();
         if (count >=8) 
         {
             // Set the text value of your 'winText'

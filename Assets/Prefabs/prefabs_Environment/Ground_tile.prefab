@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 4447761386523597724}
   - component: {fileID: 334580788993770857}
   - component: {fileID: 366839240376058269}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Ground_tile
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

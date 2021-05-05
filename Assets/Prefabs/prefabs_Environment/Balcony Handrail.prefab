@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3234139913651902867}
   m_Layer: 0
   m_Name: Balcony Handrail
-  m_TagString: Untagged
+  m_TagString: seeThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -389,7 +389,7 @@ MeshRenderer:
   m_RenderingLayerMask: 257
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ad8ca698a0b27894b98c7135081ba4bc, type: 2}
+  - {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
