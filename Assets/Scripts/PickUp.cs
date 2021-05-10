@@ -8,14 +8,22 @@ public class PickUp : MonoBehaviour
 {
     private int count;
     public GameObject winTextObject;
-    public GameObject brickwinTextObject;
+    public GameObject doorwinTextObject;
     public TextMeshProUGUI countText;
-    public TextMeshProUGUI brickCountText;
-    private int brickCount;
+    public TextMeshProUGUI doorCountText;
+    private int doorCount;
+
+    
 
     private SpiritVision wayfind1;
     private Wayfind2 wayfind2;
     private Wayfind3 wayfind3;
+
+    public GameObject PressQ;
+    public GameObject PressPickUp;
+    public bool PressPickUpActive;
+
+    
 
     private void Start()
     {
@@ -23,15 +31,26 @@ public class PickUp : MonoBehaviour
         wayfind1 = this.GetComponent<SpiritVision>();
         wayfind2 = this.GetComponent<Wayfind2>();
         wayfind3 = this.GetComponent<Wayfind3>();
-        
+
+
         count = 0;
-        brickCount = 0;
-        SetCountText ();
-        //SetBrickCountText();
+        SetCountText();
+        
+        
+        
+        //doorCount = 0;
+       // SetDoorCountText();
+   
+        
         
         // Set the text property of the Win Text UI to an empty string, making the 'You Win' (game over message) blank
         winTextObject.SetActive(false);
-        brickwinTextObject.SetActive(false);
+        //doorwinTextObject.SetActive(false);
+        
+        PressQ.SetActive(false);
+        PressPickUp.SetActive(false);
+        PressPickUpActive = false;
+
     }
 
    
@@ -41,47 +60,83 @@ public class PickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("pickup"))
         {
-            
+            PressPickUp.SetActive(true);
+            PressPickUpActive = true;
+        }
+       
+        
+
+        if (other.gameObject.CompareTag("Door"))
+        {
+            PressQ.SetActive(true);
+
+            //doorCount = doorCount + 1;
+
+           // SetDoorCountText();
+
+
+        }
+        
+        
+    }
+
+   private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && PressPickUpActive == true)
+        {
             wayfind1.GlowOn.Remove(other.gameObject);
             wayfind2.Collectable.Remove(other.gameObject);
             wayfind3.Beacon.Remove(other.gameObject);
             wayfind3.GlowOff.Remove(other.gameObject);
 
             Destroy(other.gameObject);
-           //other.gameObject.SetActive(false);
+            //other.gameObject.SetActive(false);
 
             count = count + 1;
             
             SetCountText();
-        }
-        if (other.gameObject.CompareTag("brick"))
-        {
-            other.gameObject.SetActive(false);
-
-            brickCount = brickCount + 1;
+            PressPickUp.SetActive(false);
+            PressPickUpActive = false;
             
-            SetBrickCountText();
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Door"))
+        {
+            PressQ.SetActive(false);
+            
+        }
+        
+        if (other.gameObject.CompareTag("pickup"))
+        {
+            PressPickUp.SetActive(false);
+            PressPickUpActive = false;
+            
         }
     }
 
     void SetCountText()
     {
-        countText.text = "COLLECTABLES:" + count.ToString();
-        if (count >=8) 
+        countText.text = "COLLECTABLES:" + count.ToString() + "/10";
+        if (count >=5) 
         {
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
+            
+            
         }
     }
-    void SetBrickCountText()
+   /* void SetDoorCountText()
     {
-        brickCountText.text = "brick:" + brickCount.ToString();
-        if (brickCount >=2) 
+        doorCountText.text = "Doors Found:" + doorCount.ToString();
+        if (doorCount >=2) 
         {
             // Set the text value of your 'winText'
-            brickwinTextObject.SetActive(true);
+            doorwinTextObject.SetActive(true);
         }
-    }
+    }*/
   
 
    

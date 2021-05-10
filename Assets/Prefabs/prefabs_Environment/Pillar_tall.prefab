@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5910927547163329382}
   - component: {fileID: 5910927547163329381}
   - component: {fileID: 5167232707518164514}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Pillar_tall
   m_TagString: seeThrough
   m_Icon: {fileID: 0}

@@ -135,6 +135,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839720, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
     - target: {fileID: 8288998183618839721, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -191,6 +195,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_TagString
+      value: seeThrough
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
 --- !u!4 &8998198420114628150 stripped
@@ -209,6 +217,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839720, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
     - target: {fileID: 8288998183618839721, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -265,6 +277,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_TagString
+      value: seeThrough
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
 --- !u!4 &5897617530512437558 stripped
@@ -283,6 +299,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839720, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
     - target: {fileID: 8288998183618839721, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -338,6 +358,10 @@ PrefabInstance:
     - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Name
       value: Pillar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_TagString
+      value: seeThrough
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
@@ -431,6 +455,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839720, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d045e273510f09543b4b09504193d91d, type: 2}
     - target: {fileID: 8288998183618839721, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -486,6 +514,10 @@ PrefabInstance:
     - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
       propertyPath: m_Name
       value: Pillar (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288998183618839724, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
+      propertyPath: m_TagString
+      value: seeThrough
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 152861296a71d9b43a436f2044fc0bac, type: 3}
