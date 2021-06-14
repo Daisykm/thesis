@@ -23,6 +23,8 @@ public class PickUp : MonoBehaviour
     public GameObject PressPickUp;
     public bool PressPickUpActive;
 
+    public GameObject ExitLevel;
+
     
 
     private void Start()
@@ -35,6 +37,8 @@ public class PickUp : MonoBehaviour
 
         count = 0;
         SetCountText();
+        
+        ExitLevel.SetActive(false);
         
         
         
@@ -82,7 +86,7 @@ public class PickUp : MonoBehaviour
 
    private void OnTriggerStay(Collider other)
     {
-        if (Input.GetKeyDown(KeyCode.Q) && PressPickUpActive == true)
+        if (Input.GetKeyDown(KeyCode.Q) && other.gameObject.CompareTag("pickup") && PressPickUpActive == true)
         {
             wayfind1.GlowOn.Remove(other.gameObject);
             wayfind2.Collectable.Remove(other.gameObject);
@@ -120,10 +124,13 @@ public class PickUp : MonoBehaviour
     void SetCountText()
     {
         countText.text = "COLLECTABLES:" + count.ToString() + "/10";
-        if (count >=5) 
+        if (count >=10) 
         {
             // Set the text value of your 'winText'
             winTextObject.SetActive(true);
+            
+            ExitLevel.SetActive(true);
+            
             
             
         }
