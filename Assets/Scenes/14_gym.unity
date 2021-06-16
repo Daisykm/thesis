@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 2125.6997, g: 1494.0537, b: 1248.9609, a: 1}
+  m_IndirectSpecularColor: {r: 2109.0146, g: 1490.5645, b: 1267.6641, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2561,6 +2561,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2886598856390126313, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856390126313, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856390126313, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99459845
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856390126313, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.10379794
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856390126313, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.y
       value: -0.00000000427836
       objectReference: {fileID: 0}
@@ -2697,12 +2713,24 @@ PrefabInstance:
       value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 2886598856950605980, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856950605980, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856950605980, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.119427964
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598856950605980, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.000000004270808
+      value: -0.000000004270809
       objectReference: {fileID: 0}
     - target: {fileID: 2886598856950605980, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 5.137307e-10
+      value: 5.1373084e-10
       objectReference: {fileID: 0}
     - target: {fileID: 2886598857225556582, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_IsActive
@@ -2721,16 +2749,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9908375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.13505942
       objectReference: {fileID: 0}
     - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -8.719026e-16
+      value: 8.719026e-16
       objectReference: {fileID: 0}
     - target: {fileID: 2886598857335711970, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 1.7869098e-17
+      value: -1.7869098e-17
       objectReference: {fileID: 0}
     - target: {fileID: 2886598857461561446, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2855,6 +2895,10 @@ PrefabInstance:
     - target: {fileID: 5764023394170798037, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_RootOrder
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7633294268379028657, guid: 79446b1edf273e448add153699de7738, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8401930424461617115, guid: 79446b1edf273e448add153699de7738, type: 3}
       propertyPath: m_IsActive
@@ -3758,6 +3802,173 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &2095215697
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095215699}
+  - component: {fileID: 2095215698}
+  m_Layer: 0
+  m_Name: '!ftraceLightmaps'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2095215698
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095215697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7fa80e7116296f4eb4f49ec1544ee22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  renderSettingsBounces: 5
+  renderSettingsGISamples: 16
+  renderSettingsGIBackFaceWeight: 0
+  renderSettingsTileSize: 512
+  renderSettingsPriority: 2
+  renderSettingsTexelsPerUnit: 20
+  renderSettingsForceRefresh: 1
+  renderSettingsForceRebuildGeometry: 1
+  renderSettingsPerformRendering: 1
+  renderSettingsUserRenderMode: 0
+  renderSettingsDistanceShadowmask: 0
+  renderSettingsSettingsMode: 0
+  renderSettingsFixSeams: 1
+  renderSettingsDenoise: 1
+  renderSettingsDenoise2x: 0
+  renderSettingsEncode: 1
+  renderSettingsEncodeMode: 0
+  renderSettingsOverwriteWarning: 0
+  renderSettingsAutoAtlas: 1
+  renderSettingsUnwrapUVs: 1
+  renderSettingsForceDisableUnwrapUVs: 0
+  renderSettingsMaxAutoResolution: 4096
+  renderSettingsMinAutoResolution: 16
+  renderSettingsUnloadScenes: 1
+  renderSettingsAdjustSamples: 1
+  renderSettingsGILODMode: 0
+  renderSettingsGILODModeEnabled: 1
+  renderSettingsCheckOverlaps: 0
+  renderSettingsSkipOutOfBoundsUVs: 1
+  renderSettingsHackEmissiveBoost: 1
+  renderSettingsHackIndirectBoost: 1
+  renderSettingsTempPath: 
+  renderSettingsOutPath: 
+  renderSettingsUseScenePath: 0
+  renderSettingsHackAOIntensity: 0
+  renderSettingsHackAOSamples: 16
+  renderSettingsHackAORadius: 1
+  renderSettingsShowAOSettings: 0
+  renderSettingsShowTasks: 1
+  renderSettingsShowTasks2: 0
+  renderSettingsShowPaths: 1
+  renderSettingsShowNet: 1
+  renderSettingsOcclusionProbes: 0
+  renderSettingsTexelsPerMap: 0
+  renderSettingsTexelsColor: 1
+  renderSettingsTexelsMask: 1
+  renderSettingsTexelsDir: 1
+  renderSettingsShowDirWarning: 1
+  renderSettingsRenderDirMode: 0
+  renderSettingsShowCheckerSettings: 0
+  renderSettingsSamplesWarning: 1
+  renderSettingsPrefabWarning: 1
+  renderSettingsSplitByScene: 0
+  renderSettingsUVPaddingMax: 0
+  renderSettingsPostPacking: 1
+  renderSettingsHoleFilling: 0
+  renderSettingsBeepOnFinish: 0
+  renderSettingsExportTerrainAsHeightmap: 1
+  renderSettingsRTXMode: 0
+  renderSettingsLightProbeMode: 1
+  renderSettingsClientMode: 0
+  renderSettingsServerAddress: 127.0.0.1
+  renderSettingsUnwrapper: 0
+  renderSettingsDenoiserType: 100
+  renderSettingsExportTerrainTrees: 0
+  renderSettingsShowPerf: 1
+  renderSettingsSampleDiv: 1
+  renderSettingsAtlasPacker: 0
+  renderSettingsBatchPoints: 1
+  renderSettingsRTPVExport: 1
+  renderSettingsRTPVSceneView: 0
+  renderSettingsRTPVWidth: 640
+  renderSettingsRTPVHeight: 360
+  lastBakeTime: 0
+  enlightenWarningShown: 0
+  enlightenWarningShown2: 0
+  lightUIDs: 
+  lights: []
+  implicitGroups: []
+  implicitGroupedObjects: []
+  bounds: []
+  hasEmissive: 
+  uvBuffOffsets: 
+  uvBuffLengths: 
+  uvSrcBuff: []
+  uvDestBuff: []
+  lmrIndicesOffsets: 
+  lmrIndicesLengths: 
+  lmrIndicesBuff: 
+  lmGroupLODResFlags: 
+  lmGroupMinLOD: 
+  lmGroupLODMatrix: 
+  serverGetFileList: []
+  lightmapHasColor: 
+  lightmapHasMask: 
+  lightmapHasDir: 
+  lightmapHasRNM: 
+  modifiedAssetPathList: []
+  modifiedAssets: []
+  debugTex: {fileID: 0}
+  debugRT: {fileID: 0}
+  maps: []
+  masks: []
+  dirMaps: []
+  rnmMaps0: []
+  rnmMaps1: []
+  rnmMaps2: []
+  mapsMode: 
+  bakedRenderers: []
+  bakedIDs: 
+  bakedScaleOffset: []
+  bakedVertexOffset: 
+  bakedVertexColorMesh: []
+  nonBakedRenderers: []
+  bakedLights: []
+  bakedLightChannels: 
+  bakedRenderersTerrain: []
+  bakedIDsTerrain: 
+  bakedScaleOffsetTerrain: []
+  assetList: []
+  uvOverlapAssetList: 
+  idremap: 
+  usesRealtimeGI: 0
+  emptyDirectionTex: {fileID: 0}
+--- !u!4 &2095215699
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095215697}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2111699364 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4894152385149798364, guid: 79446b1edf273e448add153699de7738, type: 3}

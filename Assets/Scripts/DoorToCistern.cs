@@ -27,7 +27,7 @@ public class DoorToCistern : MonoBehaviour
     {
         if (colliding && Input.GetKeyDown(KeyCode.Q))
         {
-            SceneManager.LoadScene("21_Cisterne Update");
+            SceneManager.LoadScene("11_Cisterne");
         }
         
     }
